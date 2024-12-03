@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window name="MODSettingsLib_SettingsWindow" inherits="ZO_DefaultSettingsWindow" parent="ZO_OptionsWindow">
+    <Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="100" y="100"/>
+    <Dimensions width="800" height="600"/>
+    <Control name="Header" inherits="ZO_OptionsWindow_TitleLabel">
+        <Anchor point="TOP" relativePoint="TOP" x="0" y="20"/>
+        <Dimensions width="200" height="30"/>
+        <Text text="MODSettingsLib"/>
+    </Control>
+    
+    <!-- Categories Panel -->
+    <Panel name="CategoriesPanel" inherits="ZO_OptionsPanelTemplate">
+        <Anchor point="LEFT" relativePoint="LEFT" x="20" y="60"/>
+        <Dimensions width="200" height="520"/>
+        <Control name="CategoryList" inherits="ZO_ScrollList">
+            <Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="0" y="0"/>
+            <Dimensions width="200" height="520"/>
+            <!-- Categories will be populated dynamically via Lua -->
+        </Control>
+    </Panel>
+    
+    <!-- Settings Panel -->
+    <Panel name="SettingsPanel" inherits="ZO_OptionsPanelTemplate">
+        <Anchor point="LEFT" relativePoint="LEFT" x="240" y="60"/>
+        <Dimensions width="540" height="520"/>
+        <Control name="SettingsList" inherits="ZO_ScrollList">
+            <Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="0" y="0"/>
+            <Dimensions width="540" height="520"/>
+            <!-- Settings will be populated dynamically via Lua -->
+        </Control>
+    </Panel>
+    
+    <!-- Profiles Panel -->
+    <Panel name="ProfilesPanel" inherits="ZO_OptionsPanelTemplate">
+        <Anchor point="BOTTOMLEFT" relativePoint="LEFT" x="20" y="-60"/>
+        <Dimensions width="200" height="150"/>
+        <Control name="ProfilesList" inherits="ZO_ScrollList">
+            <Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="0" y="0"/>
+            <Dimensions width="200" height="150"/>
+            <!-- Profiles will be populated dynamically via Lua -->
+        </Control>
+        <Control name="ProfileButtons" inherits="ZO_OptionsPanelTemplate">
+            <Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="0" y="0"/>
+            <Dimensions width="200" height="30"/>
+            <Control name="CreateProfileButton" inherits="ZO_DefaultButton">
+                <Anchor point="LEFT" relativePoint="LEFT" x="10" y="0"/>
+                <Dimensions width="80" height="30"/>
+                <Text text="Create"/>
+            </Control>
+            <Control name="DeleteProfileButton" inherits="ZO_DefaultButton">
+                <Anchor point="LEFT" relativePoint="LEFT" x="100" y="0"/>
+                <Dimensions width="80" height="30"/>
+                <Text text="Delete"/>
+            </Control>
+        </Control>
+    </Panel>
+</Window>
